@@ -1,4 +1,4 @@
-"""Run the code cells in main.ipynb and save every plot to figures/.
+"""Run the code cells in group9_code.ipynb and save every plot to figures/.
 
 The notebook uses a fixed seed, so these figures match a Restart + Run All.
 Run from this folder with the venv active:  python export_figures.py
@@ -26,7 +26,7 @@ def save_instead_of_show(*args, **kwargs):
     plt.close()
     saved.append(path)
 
-nb = json.loads((HERE / "main.ipynb").read_text(encoding="utf-8"))
+nb = json.loads((HERE / "group9_code.ipynb").read_text(encoding="utf-8"))
 namespace = {}
 for cell in nb["cells"]:
     if cell["cell_type"] == "code":
